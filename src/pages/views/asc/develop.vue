@@ -98,11 +98,11 @@
         data(){
             return{
                 list:[
-                    {date:'2017/10', text:'Project start and ICO'},
+                    {date:'2017/11', text:'Project start and ICO'},
                     {date:'2018/7', text:'1st version development and demo test'},
-                    {date:'2018/10', text:'Official launch'},
-                    {date:'2019/1', text:'Build sample industries applications and operation'},
-                    {date:'2019/7', text:'Import eco partners,operation in Asia'},
+                    {date:'2018/12', text:'Official launch'},
+                    {date:'2019/3', text:'Build sample industries applications and operation'},
+                    {date:'2019/9', text:'Import eco partners,operation in Asia'},
                     {date:'2019/12', text:'Global operation'}
                 ]
             }

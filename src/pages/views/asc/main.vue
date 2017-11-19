@@ -91,7 +91,7 @@
         <div :class="$style.content">
             <header :class="[$style.header,'clearfix']">
                 <a :class="[$style.title,'fl']" href="./"></a>
-                <a :class="[$style.link,'fr','text-center']" href="http://www.servicechain.info/pdf/scp_intro.pdf" target="_blank">MainBanner</a>
+                <a :class="[$style.link,'fr','text-center']" href="http://www.asc.services/pdf/asc.pdf" target="_blank">whiterpaper</a>
             </header>
             <div class="text-center">
                 <div :class="$style.logo"></div>
