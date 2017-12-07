@@ -24,7 +24,7 @@
 
 <template>
   <div :class="[$style.content,'text-center']">
-      <a :class="$style.contactus" href="mailto:ico@servicechain.info">contact us</a>
+      <a :class="$style.contactus" href="mailto:ico@asc.services">contact us</a>
       <div :class="$style.copyright">Copyright © 2017-2022 ASC</div>
   </div>
 </template>
