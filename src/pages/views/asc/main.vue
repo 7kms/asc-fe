@@ -56,13 +56,17 @@
                 }
             }
             .countDown{
-                width: 441*@px2rem;
+                width: 480*@px2rem;
                 overflow: hidden;
                 margin: 60*@px2rem auto;
                 padding: 4*@px2rem 50*@px2rem;
                 border: 1*@px2rem solid #00CB38;
                 border-radius: 7*@px2rem;
                 font-size: 24*@px2rem;
+                &.long{
+                  width: 520*@px2rem;  
+                   padding: 4*@px2rem 30*@px2rem;
+                }
                 .cdL{
                     float: left;
                 }
@@ -85,7 +89,7 @@
                     overflow: hidden;
                     .fill{
                         height: 100%;
-                        width: 53%;
+                        width: 10%;
                         background-image: linear-gradient(-90deg, #34DFF4 0%, #7B35FF 100%);
                     }
                 }
@@ -127,14 +131,15 @@
             &:last-child{
                 float: right;
             }
-            .red{
-                color: rgb(255,0,0);
-            }
+           
             .second{
                 margin-top: 17*@px2rem;
             }
         }
     }
+     .red{
+                color: rgb(255,0,0);
+            }
 </style>
 
 <template>
@@ -148,11 +153,11 @@
                 <div :class="$style.logo"></div>
                 <article :class="$style.desc">
                     <div :class="$style.dfn1"><span>Anonymous</span> Service Chain</div>
-                    <div :class="$style.countDown">
+                    <div :class="[$style.countDown,{[$style.long]:timeObj.distanceDay > 0}]">
                         <div :class="$style.cdL">Time left：</div>
                         <div :class="$style.cdR">
                             <template v-if="timeObj.distanceDay > 0">
-                                <span :class="$style.ct">{{timeObj.distanceDay}}</span> : <span :class="$style.ct">{{timeObj.distanceHour}}</span> : <span :class="$style.ct">{{timeObj.distanceMinute}}</span>
+                                <span :class="$style.ct">{{timeObj.distanceDay}} days</span> : <span :class="$style.ct">{{timeObj.distanceHour}} hours</span> : <span :class="$style.ct">{{timeObj.distanceMinute}} mins</span>
                             </template>
                             <template v-else>
                                 <span :class="$style.ct">{{timeObj.distanceHour}}</span> : <span :class="$style.ct">{{timeObj.distanceMinute}}</span> : <span :class="$style.ct">{{timeObj.distanceSecond}}</span>
@@ -195,7 +200,7 @@
                             <div :class="$style.fill"></div>
                         </div>
                         <div :class="$style.addr">
-                            Take ETH only，send directly to the address：0x1a67B519f983bA54eB5936B17209F4b4c8481c89 we are totaly anonymous!
+                            Take ETH only，send directly to the address：<span :class="$style.red">0x1a67B519f983bA54eB5936B17209F4b4c8481c89</span> we are totaly anonymous!
                         </div>
                     </div>
                     <div :class="$style.dfn3">What is ASC？</div>
